@@ -1,19 +1,21 @@
 const fs = require("fs");
 const path = require("path");
-const express = require("express");
 const { createServer: createViteServer } = require("vite");
 
 async function createServer() {
-  const app = express();
+  const fastify = require("fastify")({
+    logger: true,
+  });
+  await fastify.register(require("fastify-express"));
 
   const vite = await createViteServer({
     server: { middlewareMode: "ssr" },
   });
-  // use vite's connect instance as middleware
-  app.use(vite.middlewares);
 
-  app.use("*", async (req, res) => {
-    const url = req.originalUrl;
+  fastify.use(vite.middlewares);
+
+  fastify.use("*", async (request, reply) => {
+    const url = "/";
 
     try {
       let template = fs.readFileSync(
@@ -24,15 +26,20 @@ async function createServer() {
       const { render } = await vite.ssrLoadModule("/src/entry-server.ts");
       const [appHtml] = await render(url, {});
       const html = template.replace(`<!--ssr-outlet-->`, appHtml);
-      res.status(200).set({ "Content-Type": "text/html" }).end(html);
+      reply.status(200).send(html);
     } catch (e) {
       vite.ssrFixStacktrace(e);
       console.error(e);
-      res.status(500).end(e.message);
+      reply.status(500).send(e.message);
     }
   });
 
-  app.listen(3000, () => console.log("http://localhost:3000"));
+  try {
+    await fastify.listen(3000);
+  } catch (err) {
+    fastify.log.error(err);
+    process.exit(1);
+  }
 }
 
 createServer();

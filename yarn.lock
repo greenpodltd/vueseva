@@ -672,8 +672,8 @@ __metadata:
     "@vue/compiler-sfc": ^3.1.1
     "@vue/server-renderer": ^3.1.1
     "@yarnpkg/pnpify": ^3.0.0-rc.6
-    express: ^4.17.1
     fastify: ^3.17.0
+    fastify-express: ^0.3.2
     typescript: ^4.3.2
     vite: ^2.3.7
     vue: next
@@ -1715,6 +1715,23 @@ __metadata:
   version: 0.3.1
   resolution: "fastify-error@npm:0.3.1"
   checksum: ba3b964a9cc7ee72e1573f10951705ee8cadbc7a395af54ad5cfef7be05ad6eec558b71d7d9862cce92dd68145ccc7e9ab79487c37ed8c763bcf7bbf40ef6d36
+  languageName: node
+  linkType: hard
+
+"fastify-express@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "fastify-express@npm:0.3.2"
+  dependencies:
+    express: ^4.17.1
+    fastify-plugin: ^3.0.0
+  checksum: 5ef852e274f0d10eeb1c5ee5a35a5124eb50f9aede7f0dcb326487457d238367c22be681b0008fd00918de01dc7b7c34f1e6a0870dc01d6a4d7907cd378a0c8f
+  languageName: node
+  linkType: hard
+
+"fastify-plugin@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "fastify-plugin@npm:3.0.0"
+  checksum: 201c30749b42e77e6159359ae436a56243dc2b920d2efab126b2b680f61d23251d51ee2334a7cbb9b30d8be13746983df8d5695828fb1e4495e4d1d325f66793
   languageName: node
   linkType: hard
 

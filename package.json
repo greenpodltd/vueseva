@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@yarnpkg/pnpify": "^3.0.0-rc.6",
-    "express": "^4.17.1",
     "fastify": "^3.17.0",
+    "fastify-express": "^0.3.2",
     "vue": "next",
     "vue-router": "next"
   },
