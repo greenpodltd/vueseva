@@ -1,0 +1,10 @@
+{
+  "name": "blog",
+  "scripts": {
+    "dev": "vueseva dev",
+    "start": "node test.js"
+  },
+  "dependencies": {
+    "vueseva": "workspace:packages/vueseva"
+  }
+}

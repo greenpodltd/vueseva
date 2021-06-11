@@ -1,0 +1,8 @@
+{
+  "name": "vueseva",
+  "main": "./src/index.js",
+  "bin": "./bin/cli.js",
+  "files": [
+    "bin"
+  ]
+}

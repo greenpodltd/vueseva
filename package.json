@@ -1,5 +1,9 @@
 {
-  "name": "vueseva",
+  "name": "@vueseva/root",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
   "scripts": {
     "dev": "node server",
     "build": "yarn build:client && yarn build:server",

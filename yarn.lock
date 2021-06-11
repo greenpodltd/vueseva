@@ -663,6 +663,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueseva/root@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@vueseva/root@workspace:."
+  dependencies:
+    "@vitejs/plugin-vue": ^1.2.3
+    "@vitejs/plugin-vue-jsx": ^1.1.5
+    "@vue/compiler-sfc": ^3.1.1
+    "@vue/server-renderer": ^3.1.1
+    "@yarnpkg/pnpify": ^3.0.0-rc.6
+    express: ^4.17.1
+    fastify: ^3.17.0
+    typescript: ^4.3.2
+    vite: ^2.3.7
+    vue: next
+    vue-router: next
+  languageName: unknown
+  linkType: soft
+
 "@yarnpkg/core@npm:^3.0.0-rc.5":
   version: 3.0.0-rc.5
   resolution: "@yarnpkg/core@npm:3.0.0-rc.5"
@@ -998,6 +1016,14 @@ __metadata:
   checksum: ea33d7d25674df4253ae3667da7f48ade6cc8828cb4f2c3a7753f53975f10cebae57e0d1ecf84f1b920b5467262dc0d4f357e5e497b138472d0e64992a8402a4
   languageName: node
   linkType: hard
+
+"blog@workspace:examples/blog":
+  version: 0.0.0-use.local
+  resolution: "blog@workspace:examples/blog"
+  dependencies:
+    vueseva: "workspace:packages/vueseva"
+  languageName: unknown
+  linkType: soft
 
 "bluebird@npm:^3.7.2":
   version: 3.7.2
@@ -3888,21 +3914,11 @@ typescript@^4.3.2:
   languageName: node
   linkType: hard
 
-"vueseva@workspace:.":
+"vueseva@workspace:packages/vueseva":
   version: 0.0.0-use.local
-  resolution: "vueseva@workspace:."
-  dependencies:
-    "@vitejs/plugin-vue": ^1.2.3
-    "@vitejs/plugin-vue-jsx": ^1.1.5
-    "@vue/compiler-sfc": ^3.1.1
-    "@vue/server-renderer": ^3.1.1
-    "@yarnpkg/pnpify": ^3.0.0-rc.6
-    express: ^4.17.1
-    fastify: ^3.17.0
-    typescript: ^4.3.2
-    vite: ^2.3.7
-    vue: next
-    vue-router: next
+  resolution: "vueseva@workspace:packages/vueseva"
+  bin:
+    vueseva: ./bin/cli.js
   languageName: unknown
   linkType: soft
 
