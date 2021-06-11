@@ -4,5 +4,11 @@
   "bin": "./bin/cli.js",
   "files": [
     "bin"
-  ]
+  ],
+  "dependencies": {
+    "fast-glob": "^3.2.5",
+    "fs-extra": "^10.0.0",
+    "vue": "next",
+    "vue-router": "next"
+  }
 }
