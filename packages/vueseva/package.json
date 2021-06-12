@@ -10,5 +10,8 @@
     "fs-extra": "^10.0.0",
     "vue": "next",
     "vue-router": "next"
+  },
+  "devDependencies": {
+    "vite": "^2.3.7"
   }
 }

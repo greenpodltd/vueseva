@@ -1,10 +1,22 @@
 {
   "name": "blog",
   "scripts": {
-    "dev": "vueseva dev",
+    "dev": "vueseva dev && node ./src/.vueseva/index.js",
     "start": "node test.js"
   },
   "dependencies": {
+    "fastify": "^3.17.0",
+    "fastify-express": "^0.3.2",
+    "vue": "next",
+    "vue-router": "next",
     "vueseva": "workspace:packages/vueseva"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vitejs/plugin-vue-jsx": "^1.1.5",
+    "@vue/compiler-sfc": "^3.1.1",
+    "@vue/server-renderer": "^3.1.1",
+    "typescript": "^4.3.2",
+    "vite": "^2.3.7"
   }
 }

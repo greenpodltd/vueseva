@@ -23,7 +23,9 @@ async function createServer() {
         "utf-8"
       );
       template = await vite.transformIndexHtml(url, template);
-      const { render } = await vite.ssrLoadModule("./entry-server.ts");
+      const { render } = await vite.ssrLoadModule(
+        "/src/.vueseva/entry-server.ts"
+      );
       const [appHtml] = await render(url, {});
       const html = template.replace(`<!--ssr-outlet-->`, appHtml);
       reply.status(200).send(html);

@@ -1021,6 +1021,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blog@workspace:examples/blog"
   dependencies:
+    "@vitejs/plugin-vue": ^1.2.3
+    "@vitejs/plugin-vue-jsx": ^1.1.5
+    "@vue/compiler-sfc": ^3.1.1
+    "@vue/server-renderer": ^3.1.1
+    fastify: ^3.17.0
+    fastify-express: ^0.3.2
+    typescript: ^4.3.2
+    vite: ^2.3.7
+    vue: next
+    vue-router: next
     vueseva: "workspace:packages/vueseva"
   languageName: unknown
   linkType: soft
@@ -3968,6 +3978,7 @@ typescript@^4.3.2:
   dependencies:
     fast-glob: ^3.2.5
     fs-extra: ^10.0.0
+    vite: ^2.3.7
     vue: next
     vue-router: next
   bin:
